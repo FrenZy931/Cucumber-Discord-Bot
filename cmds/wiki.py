@@ -14,7 +14,6 @@ async def wiki(interaction : discord.Interaction, query):
     sentences = page_py.summary.split('.')[:5]
     summary = '.'.join(sentences)
     summary_full = (summary + "...")
-
     embed = discord.Embed(
         title=title,
         description=summary_full,

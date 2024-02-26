@@ -13,12 +13,17 @@ from cmds import avatar as Avatar
 from cmds import echo as Echo
 from cmds import embed as Embed
 from cmds import wiki as Wiki
+from cmds import reddit as Reddit
 
 intents = discord.Intents.all()
 bot = commands.Bot(command_prefix='cc!', intents=intents)
 bot.help_command = None
 activity = discord.Game(name="/help")
 bot.activity = activity
+
+@bot.tree.command(name="reddit", description="search subreddits")
+async def reddit(interaction : discord.Interaction, redditname : str, posts : int):
+    await Reddit.reddit(interaction, redditname, posts)
 
 @bot.tree.command(name="wiki", description="find things on wiki")
 async def wiki(interaction : discord.Interaction, query : str):
