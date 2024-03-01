@@ -16,7 +16,6 @@ from cmds import wiki as Wiki
 from cmds import reddit as Reddit
 from cmds import randomnumber as RandomNumber
 from cmds import coinflip as CoinFlip
-from cmds import clear as Clear
 
 intents = discord.Intents.all()
 bot = commands.Bot(command_prefix='cc!', intents=intents)
