@@ -18,6 +18,11 @@ hello thank you for using cucumber, the best bot ever made.
 **info** - show info about bot
 **ping** - show discord bot latency
 **wiki** - search things on wiki
+**reddit** - search subreddits on reddit
+**randomnumber** - generate random number
+**github** - sends link to our github repo
+**coinflip** - flip a coin
+**randomcolor** - generate random color
 
 ***bro who uses help screens in 2024 :skull:***""",
 

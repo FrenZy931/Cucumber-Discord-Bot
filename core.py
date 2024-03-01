@@ -16,6 +16,8 @@ from cmds import wiki as Wiki
 from cmds import reddit as Reddit
 from cmds import randomnumber as RandomNumber
 from cmds import coinflip as CoinFlip
+from cmds import github as GitHub
+from cmds import randomcolor as RandomColor
 
 intents = discord.Intents.all()
 bot = commands.Bot(command_prefix='cc!', intents=intents)
@@ -23,9 +25,17 @@ bot.help_command = None
 activity = discord.Game(name="/help")
 bot.activity = activity
 
+@bot.tree.command(name="randomcolor", description="generate random color")
+async def randomcolor(interaction : discord.Interaction):
+    await RandomColor.randomcolor(interaction)
+
 @bot.tree.command(name="coinflip", description="flip a coin")
 async def coinflip(interaction : discord.Interaction):
     await CoinFlip.coinflip(interaction)
+
+@bot.tree.command(name="github", description="sends link to github repo")
+async def github(interaction : discord.Interaction):
+    await GitHub.github(interaction)
 
 @bot.tree.command(name="reddit", description="search subreddits")
 async def reddit(interaction : discord.Interaction, redditname : str, posts : int):
