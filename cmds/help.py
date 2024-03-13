@@ -13,8 +13,8 @@ hello thank you for using cucumber, the best bot ever made.
 **cucumber** - says cucumber
 **cucumberpic** - posts random cucumber pic from our big cucumber database
 **avatar** - show user avatar
-**echo** - send message
-**embed** - send embed
+**echo** - send message (admin only)
+**embed** - send embed (admin only)
 **info** - show info about bot
 **ping** - show discord bot latency
 **wiki** - search things on wiki
@@ -23,6 +23,13 @@ hello thank you for using cucumber, the best bot ever made.
 **github** - sends link to our github repo
 **coinflip** - flip a coin
 **randomcolor** - generate random color
+**meme** - posts random meme
+**mute** - mute users (admin only)
+**unmute** - unmute users (admin only)
+**userinfo** - send information about an user
+**serverinfo** - send information about this server
+**meme** - send random meme
+**server** - send invite to cucumber community official
 
 ***bro who uses help screens in 2024 :skull:***""",
 
