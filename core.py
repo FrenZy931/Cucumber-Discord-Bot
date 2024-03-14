@@ -29,6 +29,7 @@ from cmds import unmute as Unmute
 from cmds import userinfo as Userinfo
 from cmds import serverinfo as Serverinfo
 from cmds import server as Server
+from cmds import dice as Dice
 
 intents = discord.Intents.all()
 bot = commands.Bot(command_prefix='cucumber!!!!!!', intents=intents)
@@ -139,6 +140,10 @@ async def help(interaction : discord.Interaction):
 async def help(interaction : discord.Interaction):
     await Cucumberpic.cucumberpic(interaction)
 
+@bot.tree.command(name="dice", description="throw a dice")
+async def dice(interaction : discord.Interaction):
+    await Dice.dice(interaction)
+
 async def update_data():
     while True:
         for guild in bot.guilds:
@@ -148,9 +153,11 @@ async def update_data():
 
 @bot.event
 async def on_ready():
+    print("loading bot functions..")
     await on_script_start()
 
 async def on_script_start():
+    await Cucumberpic.update_pictures()
     print('bot has started')
     await bot.tree.sync()
     await asyncio.run(await update_data())

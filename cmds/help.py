@@ -30,6 +30,7 @@ hello thank you for using cucumber, the best bot ever made.
 **serverinfo** - send information about this server
 **meme** - send random meme
 **server** - send invite to cucumber community official
+**dice** - throw a dice
 
 ***bro who uses help screens in 2024 :skull:***""",
 
